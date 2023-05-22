@@ -25,17 +25,17 @@ Check out the live demo of the Joke Generator [here](https://uzaifm127.github.io
 
 To run the Joke Generator locally, follow these steps:
 
-1.Clone the repository: git clone https://github.com/your-username/Joke_Generator.git
-2.Open any code editor in Joke_Generator directory.
-3.Open the index.html file and uncomment the rest link which links CSS file locally.
-4.Open the index.html file and uncomment the rest script which links JS file locally.
-5.Comment out that link and script which has /Joke_Generator/ at starting.
+1. Clone the repository: git clone https://github.com/your-username/Joke_Generator.git
+2. Open any code editor in Joke_Generator directory.
+3. Open the index.html file and uncomment the rest link which links CSS file locally.
+4. Open the index.html file and uncomment the rest script which links JS file locally.
+5. Comment out that link and script which has /Joke_Generator/ at starting.
 
 ## Usage
 
-1.Open the Joke Generator in your web browser.
-2.Click the "Generate" button to generate a random joke.
-3.Enjoy a good laugh!
+1. Open the Joke Generator in your web browser.
+2. Click the "Generate" button to generate a random joke.
+3. Enjoy a good laugh!
 
 ## Customization
 
