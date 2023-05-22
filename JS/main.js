@@ -1,4 +1,4 @@
-let jokesArray = [
+const jokesArray = [
   `
 सन्ता (अपनी मम्मी से) – माँ खुशखबरी है,
 
@@ -2441,10 +2441,8 @@ Wife – लड़ाई सुंदरी
   `,
 ];
 
-const jokeContainer = document.getElementsByClassName("jokeContainer")[0];
-const randomGenerateButton = document.getElementsByClassName("btn3")[0];
-const nextButton = document.getElementsByClassName("btn2")[0];
-const previousButton = document.getElementsByClassName("btn1")[0];
+const jokeContainer = document.querySelector(".jokeContainer");
+const generateBtn = document.querySelector(".btn");
 let next = 0;
 let extraAtOnce;
 let leastAtOnce;
@@ -2453,88 +2451,40 @@ const randomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-randomGenerateButton.addEventListener("click", () => {
+generateBtn.addEventListener("click", () => {
   let index = randomNumber(0, jokesArray.length - 1);
   //innerHTML deni padegi innerText ki jageh because text is format me hai ki text dene par br tag aayenge automatic.
   jokeContainer.innerHTML = jokesArray[index];
-  randomGenerateButton.style.background = "black";
-  randomGenerateButton.style.color = "white";
+  generateBtn.style.background = "black";
+  generateBtn.style.color = "white";
   setTimeout(() => {
-    randomGenerateButton.style.background = "plum";
-    randomGenerateButton.style.color = "black";
+    generateBtn.style.background = "plum";
+    generateBtn.style.color = "black";
   }, 150);
 });
 
-nextButton.addEventListener("click", () => {
-  if (leastAtOnce) {
-    next += 2;
-  }
-  if (next <= jokesArray.length - 1 && next >= 0) {
-    jokeContainer.innerHTML = jokesArray[next];
-  } else if (next > jokesArray.length - 1) {
-    next = 0;
-    jokeContainer.innerHTML = jokesArray[next];
-  }
-  if (!leastAtOnce) {
-    next++;
-  }
-  nextButton.style.background = "black";
-  nextButton.style.color = "white";
-  setTimeout(() => {
-    nextButton.style.background = "plum";
-    nextButton.style.color = "black";
-  }, 150);
-  leastAtOnce = false;
-  extraAtOnce = true;
-});
+const heading = document.getElementById("heading");
 
-previousButton.addEventListener("click", () => {
-  if (extraAtOnce) {
-    next -= 2;
-  } else if (!extraAtOnce) {
-    next--;
-  }
-  if (next >= 0) {
-    jokeContainer.innerHTML = jokesArray[next];
-  } else if (next < 0) {
-    next = jokesArray.length - 1;
-    jokeContainer.innerHTML = jokesArray[next];
-  }
-  previousButton.style.background = "black";
-  previousButton.style.color = "white";
-  setTimeout(() => {
-    previousButton.style.background = "plum";
-    previousButton.style.color = "black";
-  }, 150);
-  extraAtOnce = false;
-  leastAtOnce = true;
-});
+let size = 1.5;
 
-// console.log(jokesArray.length - 1);
-
-let h1 = document
-  .getElementsByClassName("navbar")[0]
-  .getElementsByTagName("h1")[0];
-
-let size = 2;
 setInterval(() => {
   setTimeout(() => {
-    size += 1;
-    h1.style.fontSize = size + "vw";
+    size += 0.5;
+    heading.style.fontSize = size + "rem";
   }, 100);
 
   setTimeout(() => {
-    size -= 1;
-    h1.style.fontSize = size + "vw";
+    size -= 0.5;
+    heading.style.fontSize = size + "rem";
   }, 300);
 
   setTimeout(() => {
-    size += 1;
-    h1.style.fontSize = size + "vw";
+    size += 0.5;
+    heading.style.fontSize = size + "rem";
   }, 500);
 
   setTimeout(() => {
-    size -= 1;
-    h1.style.fontSize = size + "vw";
+    size -= 0.5;
+    heading.style.fontSize = size + "rem";
   }, 700);
 }, 2000);
