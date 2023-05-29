@@ -57,6 +57,37 @@ body {
   text-shadow: 0 0 0.25em #fff, 0 0 0.5em #fff, 0 0 0.75em #fff;
 }
 
+.madeByMe {
+  padding: 2vmin;
+  font-size: 3vmin;
+  position: absolute;
+  background: linear-gradient(#252525, #444, rgb(65, 65, 65));
+  color: white;
+  border-radius: 1.3vmin;
+  text-transform: uppercase;
+  letter-spacing: 0.5vmin;
+  bottom: 7%;
+  right: 5%;
+}
+
+.watermark-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  pointer-events: none;
+}
+
+.watermark {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
 @media (max-width: 600px) {
   .jokeContainer {
     font-size: 17px;
@@ -67,5 +98,19 @@ body {
   .btn {
     border-radius: 4px;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .watermark {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .watermark {
+    font-size: 12px;
+    padding: 6px 10px;
   }
 }
