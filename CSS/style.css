@@ -57,19 +57,6 @@ body {
   text-shadow: 0 0 0.25em #fff, 0 0 0.5em #fff, 0 0 0.75em #fff;
 }
 
-.madeByMe {
-  padding: 2vmin;
-  font-size: 3vmin;
-  position: absolute;
-  background: linear-gradient(#252525, #444, rgb(65, 65, 65));
-  color: white;
-  border-radius: 1.3vmin;
-  text-transform: uppercase;
-  letter-spacing: 0.5vmin;
-  bottom: 7%;
-  right: 5%;
-}
-
 .watermark-container {
   position: fixed;
   bottom: 30px;
